@@ -10,3 +10,5 @@ out/
 
 # project
 .env
+
+public/css

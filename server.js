@@ -109,9 +109,14 @@ app.get('/github', async (_, res) => res.redirect('https://github.com/surviv-fun
 app.get('/discord', async (_, res) => res.redirect('https://discord.gg/9SmcRjW9QT'));
 app.get('/join', async (_, res) => res.redirect('https://discord.gg/9SmcRjW9QT'));
 app.get('/email', async (_, res) => res.redirect('mailto:contact@surviv.fun'));
+app.get('/status', async (_, res) => res.redirect('https://status.surviv.fun/'));
 
 // loads the robots.txt ( SEO )
-app.get('/robots.txt', async (_, res) => res.sendFile('./public/robots.txt'));
+app.get('/robots.txt', async (_, res) => res.sendFile(publicPath + 'robots.txt'));
+
+app.get('/', async (req, res) => {
+    res.render('index');
+});
 
 // send a 404 at each request if route not found
 app.all('*', async (req, res) => res.status(404).json({ error: true, message: 'not found', code: 404 }));
