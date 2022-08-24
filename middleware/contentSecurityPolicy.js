@@ -24,7 +24,7 @@ var contentSecurity = [
     "script-src https: 'self' 'unsafe-inline' cdn.jsdelivr.net cdnjs.cloudflare.com",
     "connect-src 'self' api.surviv.fun",
     "style-src 'self' 'unsafe-inline' cdnjs.cloudflare.com cdn.jsdelivr.net fonts.googleapis.com necolas.github.io",
-    "img-src 'self'",
+    "img-src 'self' 'unsafe-inline' data: blob:",
     "font-src 'self' cdnjs.cloudflare.com fonts.googleapis.com cdn.jsdelivr.net fonts.gstatic.com"
 ];
 
