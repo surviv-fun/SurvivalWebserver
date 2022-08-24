@@ -22,10 +22,10 @@
 var contentSecurity = [
     "default-src https: 'self' cdn.jsdelivr.net",
     "script-src https: 'self' 'unsafe-inline' cdn.jsdelivr.net cdnjs.cloudflare.com",
-    "connect-src 'none'",
+    "connect-src 'self' api.surviv.fun",
     "style-src 'self' 'unsafe-inline' cdnjs.cloudflare.com cdn.jsdelivr.net fonts.googleapis.com necolas.github.io",
     "img-src 'self'",
-    "font-src 'self' cdnjs.cloudflare.com fonts.googleapis.com fonts.gstatic.com"
+    "font-src 'self' cdnjs.cloudflare.com fonts.googleapis.com cdn.jsdelivr.net fonts.gstatic.com"
 ];
 
 module.exports = (req, res, next) => {
