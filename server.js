@@ -105,7 +105,7 @@ app.use((req, res, next) => auth.authJWT(req, res, next, app));
 app.use('/public/', express.static(publicPath));
 
 // homepage frontend
-app.use('/', express.static(defaultPath + 'frontend/build'));
+app.use('/app/', express.static(defaultPath + 'frontend/build'));
 
 // Basic redirects
 app.get('/github', async (_, res) => res.redirect('https://github.com/surviv-fun'));
@@ -120,6 +120,8 @@ app.get('/robots.txt', async (_, res) => res.sendFile(publicPath + 'robots.txt')
 // app.get('/', async (req, res) => {
 //     res.render('index');
 // });
+
+app.get('/', async (_, res) => res.redirect('/app/'));
 
 // send a 404 at each request if route not found
 app.all('*', async (req, res) => res.status(404).json({ error: true, message: 'not found', code: 404 }));
