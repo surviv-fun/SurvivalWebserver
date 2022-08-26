@@ -28,7 +28,7 @@ module.exports = {
             exec_mode: 'fork',
             watch: true,
             autorestart: true,
-            ignore_watch: ['./.git/*', './.ignore_watch/*', './node_modules/*', './cache.json']
+            ignore_watch: ['./.git/*', './.ignore_watch/*', './node_modules/*', './cache.json', './frontend/*']
         }
     ]
 };
